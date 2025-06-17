@@ -1,0 +1,19 @@
+{
+    "name": "pete/functions",
+    "description": "Collection of PHP functions",
+    "type": "library",
+    "license": "AGPL-3.0",
+    "autoload": {
+        "psr-4": {
+            "Pete\\Functions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Peter Davidson",
+            "email": "pdavidson@overdoseresearch.org"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
