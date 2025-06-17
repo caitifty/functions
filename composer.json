@@ -6,7 +6,18 @@
     "autoload": {
         "psr-4": {
             "Caitifty\\Functions\\": "src/"
-        }
+        },
+        "files": [
+            "src/functions_aws.php",
+            "src/csv_creator_generic.php",
+            "src/csv_datadictionary_generic.php",
+            "src/functions_aws.php",
+            "src/functions_datadownload.php",
+            "src/functions_datetime.php",
+            "src/functions_display.php",
+            "src/functions_mysqli.php"
+        ]
+
     },
     "authors": [
         {
