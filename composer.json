@@ -1,0 +1,19 @@
+{
+    "name": "caitifty/functions",
+    "description": "Pete's cross-project functions",
+    "type": "library",
+    "license": "AGPL-3.0",
+    "autoload": {
+        "psr-4": {
+            "Caitifty\\Functions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Peter Davidson",
+            "email": "pdavidson@overdoseresearch.org"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
