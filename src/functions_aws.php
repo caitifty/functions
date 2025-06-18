@@ -20,8 +20,7 @@ function fn_sns ($recipientphone, $message) {
 Sends a text message (SMS message) directly to a phone number using Amazon SNS.
 
 $recipientphone = intended recipient's full phone number with country code at beginning
-				  (Note at time of writing only US numbers approved on AWS)
-				  eg +14152719474
+				  eg +19999999999
 
 $message = text message to be sent. If > 140 char will be split into sequential messages
 
