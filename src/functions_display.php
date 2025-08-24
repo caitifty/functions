@@ -77,7 +77,7 @@ function fn_footer($test, $next, $type = "plain") {
         case "full":
           echo '<br><p align="right">';
           if($_ENV['static_hostName'] == "localhost") echo '<span style="color:Tomato">localhost</span> &nbsp;';
-          if(dirname($_SERVER['SCRIPT_FILENAME']) == "/var/www/".$_ENV{'static_sitename'] {
+          if(dirname($_SERVER['SCRIPT_FILENAME']) == "/var/www/".$_ENV['static_sitename']) {
             echo '<a href="menu.php">Menu</a> 
                   <a href="users/users_preferences.php">User preferences</a> 
                   <a href="logout.php">Logout</a> &nbsp; </p>';
