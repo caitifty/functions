@@ -57,7 +57,7 @@ function fn_footer($test, $next, $type = "plain") {
 
   */
 
-  global $static_hostName;
+#  global $static_hostName;
 
   if($test > 0) {
 
@@ -75,22 +75,22 @@ function fn_footer($test, $next, $type = "plain") {
       switch ($type) {
 
         case "full":
-        echo '<br><p align="right">';
-#        echo dirname($_SERVER['SCRIPT_FILENAME']);
-        if($static_hostName == "localhost") echo '<span style="color:Tomato">localhost</span> &nbsp;';
-        if(dirname($_SERVER['SCRIPT_FILENAME']) == "/var/www/checknevada.org") {
-          echo '<a href="menu.php">Menu</a> 
-                <a href="users/users_preferences.php">User preferences</a> 
-                <a href="logout.php">Logout</a> &nbsp; </p>';
-        } else {
-          echo '<a href="../menu.php">Menu</a> 
-                <a href="../users/users_preferences.php">User preferences</a> 
-                <a href="../logout.php">Logout</a> &nbsp; </p>';
-        }
-        echo '<br></body></html>';
+          echo '<br><p align="right">';
+          if($_ENV['static_hostName'] == "localhost") echo '<span style="color:Tomato">localhost</span> &nbsp;';
+          if(dirname($_SERVER['SCRIPT_FILENAME']) == "/var/www/".$_ENV{'static_sitename'] {
+            echo '<a href="menu.php">Menu</a> 
+                  <a href="users/users_preferences.php">User preferences</a> 
+                  <a href="logout.php">Logout</a> &nbsp; </p>';
+          } else {
+            echo '<a href="../menu.php">Menu</a> 
+                  <a href="../users/users_preferences.php">User preferences</a> 
+                  <a href="../logout.php">Logout</a> &nbsp; </p>';
+          }
+          echo '<br></body></html>';
+          break;
 
         default:
-        echo '<br></body></html>';
+          echo '<br></body></html>';
 
       }
 

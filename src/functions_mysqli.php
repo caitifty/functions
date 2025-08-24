@@ -36,8 +36,8 @@ function fn_mysqli_runstatements ($test, $tables, $stmnt) {
 	$backfile = basename($backfiles[0]['file']);
 
   global $mysqli_link;
-  global $static_mainerrormessage;
-  global $static_mysqli_logfilepath;
+#  global $static_mainerrormessage;
+#  global $static_mysqli_logfilepath;
 
 
   if($test == 0) {
@@ -45,7 +45,7 @@ function fn_mysqli_runstatements ($test, $tables, $stmnt) {
     $backfiles = debug_backtrace();
     $backfile = basename($backfiles[0]['file']);
 
-    $logfile = $static_mysqli_logfilepath."/".date('Y-m-d')."_mysqli_log";
+    $logfile = $_ENV['static_mysqli_logfilepath']."/".date('Y-m-d')."_mysqli_log";
     $log = fopen($logfile, "a");
 
     $tablestring = "LOCK TABLES ";
@@ -60,7 +60,7 @@ function fn_mysqli_runstatements ($test, $tables, $stmnt) {
         mysqli_query($mysqli_link,"UNLOCK TABLES;");
         mysqli_close($mysqli_link);
         include(__DIR__.'/header.html');
-        echo '<br><br><p align="center">'.$static_mainerrormessage.'</p><br><br>';
+        echo '<br><br><p align="center">'.$_ENV['static_mainerrormessage'].'</p><br><br>';
         echo '<p>A mysql statement died in '.$backfile.'.</p><br>';
         echo "<p>$value</p><br>";
         echo '<br></body></html>';
