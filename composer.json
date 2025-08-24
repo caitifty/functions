@@ -2,7 +2,7 @@
     "name": "caitifty/functions",
     "description": "Pete's cross-project functions",
     "type": "library",
-    "license": "AGPL-3.0",
+    "license": "AGPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "Caitifty\\Functions\\": "src/"
